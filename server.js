@@ -11,7 +11,8 @@ app.use(express.static('public'));
 
 app.use(require('./routes'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pizza-hunt', err =>
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pizza-hunt', 
+err =>
 {
   if(err) throw err;
         console.log('connected to MongoDB')
